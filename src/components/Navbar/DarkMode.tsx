@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import lightSwitch from '../../assets/lightSwitch.png'
 import darkSwitch from '../../assets/darkSwitch.png'
-type ThemeType = 'light' | 'dark' | null
+//type ThemeType = 'light' | 'dark' | null
 const DarkMode = () => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light"
     //localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
