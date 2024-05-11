@@ -1,6 +1,7 @@
 import { IoMdSearch } from "react-icons/io";
 import { FaCartShopping } from "react-icons/fa6";
 import DarkMode from "./DarkMode";
+import LowerNavbar from "./LowerNavbar";
 
 const Navbar = () => {
   return (
@@ -13,7 +14,13 @@ const Navbar = () => {
               href="/"
               className="font-bold text-2xl sm:text:3xl flex gap-2 items-center"
             >
-              <img src="./logo.jpg" alt="brand-logo" width={50} height={50} className="rounded-full"/>
+              <img
+                src="./logo.jpg"
+                alt="brand-logo"
+                width={50}
+                height={50}
+                className="rounded-full"
+              />
               Bilmosh
             </a>
           </div>
@@ -24,7 +31,7 @@ const Navbar = () => {
                 type="text"
                 placeholder="Search..."
                 className="w-[200px] sm:w-[200px] group-hover:w-[300px] transition-all duration-300 focus:outline-none px-2 py-1 rounded-full
-                  border-gray-300 focus:border-1 focus:border-primary"
+                  border-gray-300 focus:border-1 focus:border-primary dark:border-gray-500 dark:bg-gray-800"
               />
               <IoMdSearch
                 className="text-gray-500 group-hover:text-primary absolute top-1/2 -translate-y-1/2 
@@ -50,6 +57,19 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      {/* search on mobile screens */}
+      <div className="relative group px-2 sm:hidden">
+        <input
+          type="text"
+          placeholder="Search..."
+          className=" w-[80%] outline-none border-none px-2 py-1 dark:border-gray-500 dark:bg-gray-800 "
+        />
+        <IoMdSearch
+          className="text-gray-500 group-hover:text-primary absolute top-1/2 -translate-y-1/2 
+            right-3 cursor-pointer"
+        />
+      </div>
+      <LowerNavbar />
     </div>
   );
 };
