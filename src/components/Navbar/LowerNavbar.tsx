@@ -10,7 +10,7 @@ const Menu = [
   },
   {
     id: 2,
-    name: "Top Rated",
+    name: "Womens Wear",
     link: "/#services",
   },
   {
@@ -25,7 +25,7 @@ const Menu = [
   },
   {
     id: 5,
-    name: "Electronics",
+    name: "New Arrival",
     link: "/#",
   },
 ];
